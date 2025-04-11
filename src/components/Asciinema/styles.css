@@ -1,0 +1,7 @@
+.ap-player svg {
+  @apply inline-block;
+}
+
+.ap-container {
+  @apply w-full my-4;
+}
