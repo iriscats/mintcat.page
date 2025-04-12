@@ -1,4 +1,4 @@
-import { themes } from "prism-react-renderer";
+import { themes} from "prism-react-renderer";
 
 import type { Config } from "@docusaurus/types";
 import type { Options as ChangelogOptions } from "@nullbot/docusaurus-plugin-changelog";
@@ -15,7 +15,7 @@ const navbar: Preset.ThemeConfig["navbar"] = {
   title: "MintCat",
   logo: {
     alt: "MintCat",
-    src: "logo.png",
+    src: "icon.ico",
     href: "/",
     target: "_self",
     height: 32,
@@ -31,7 +31,7 @@ const footer: Preset.ThemeConfig["footer"] = {
   style: "light",
   logo: {
     alt: "MintCat",
-    src: "logo.png",
+    src: "icon.ico",
     href: "/",
     target: "_self",
     height: 32,
@@ -73,15 +73,19 @@ const nonepress: Preset.ThemeConfig["nonepress"] = {
     docsVersionDropdown: {
       dropdownItemsAfter: [
         {
-          label: "1.x",
-          href: "https://v1.nonebot.dev/",
+          label: "0.2.x",
+          href: "https://github.com/trumank/mint",
+        },
+        {
+          label: "0.3.x",
+          href: "https://github.com/iriscats/mintcat",
         },
       ],
     },
     socialLinks: [
       {
         icon: ["fab", "github"],
-        href: "https://github.com/nonebot/nonebot2",
+        href: "https://github.com/iriscats/mintcat",
       },
     ],
   },
@@ -89,11 +93,11 @@ const nonepress: Preset.ThemeConfig["nonepress"] = {
     socialLinks: [
       {
         icon: ["fab", "github"],
-        href: "https://github.com/nonebot/nonebot2",
+        href: "https://github.com/iriscats/mintcat",
       },
       {
         icon: ["fab", "qq"],
-        href: "https://jq.qq.com/?_wv=1027&k=5OFifDh",
+        href: "https://qm.qq.com/q/ex0ylyy7wk",
       }
     ],
   },
@@ -116,7 +120,7 @@ export default async function createConfigAsync() {
     favicon: "icons/favicon.ico",
 
     // Set the production url of your site here
-    url: "https://page.mintcat.worker.dev",
+    url: "https://mintcat.v1st.net",
     // Set the /<baseUrl>/ pathname under which your site is served
     // For GitHub pages deployment, it is often '/<projectName>/'
     baseUrl: process.env.BASE_URL || "/",
@@ -143,9 +147,9 @@ export default async function createConfigAsync() {
         /** @type {import('@nullbot/docusaurus-preset-nonepress').Options} */
         {
           docs: {
-            sidebarPath: require.resolve("./sidebars.js"),
+            //sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
-            editUrl: "https://github.com/nonebot/nonebot2/edit/master/website/",
+            editUrl: "https://github.com/iriscats/mintcat",
             showLastUpdateAuthor: true,
             showLastUpdateTime: true,
           },
@@ -169,7 +173,7 @@ export default async function createConfigAsync() {
       [
         "@nullbot/docusaurus-plugin-changelog",
         {
-          changelogPath: "src/changelog/changelog.md",
+          changelogPath: "docs/changelog/changelog.md",
           changelogHeader: `description: Changelog
 toc_max_heading_level: 2
 sidebar_custom_props:
