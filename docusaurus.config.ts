@@ -88,6 +88,7 @@ const nonepress: Preset.ThemeConfig["nonepress"] = {
         href: "https://github.com/iriscats/mintcat",
       },
     ],
+
   },
   footer: {
     socialLinks: [
@@ -147,7 +148,7 @@ export default async function createConfigAsync() {
         /** @type {import('@nullbot/docusaurus-preset-nonepress').Options} */
         {
           docs: {
-            //sidebarPath: require.resolve("./sidebars.js"),
+            sidebarPath: require.resolve("./sidebars.js"),
             // Please change this to your repo.
             editUrl: "https://github.com/iriscats/mintcat",
             showLastUpdateAuthor: true,
